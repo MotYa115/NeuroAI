@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroAI - ЛУЧШАЯ нейросеть</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <h2>Добро пожаловать в NeuroAI</h2>
+            <p>Пожалуйста, введите ваше имя для начала работы:</p>
+            <input type="text" id="usernameInput" placeholder="Введите ваше имя">
+            <button id="loginButton">Войти</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="new-chat-btn">
+                <button id="newChatBtn">Новый чат</button>
+            </div>
+            <div class="chat-history">
+                <h3>История чатов</h3>
+                <ul id="chatHistoryList">
+                    <!-- Chat history items will be added here dynamically -->
+                </ul>
+            </div>
+            <div id="adminPanel" class="admin-panel hidden">
+                <h3>Сообщения пользователей</h3>
+                <div id="pendingMessages">
+                    <!-- Pending messages will be displayed here for admin -->
+                </div>
+            </div>
+            <div class="user-info">
+                <p>Пользователь</p>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="chat-header">
+                <h2>NeuroAI</h2>
+            </div>
+            <div class="chat-container">
+                <div class="messages" id="messages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            <p>Привет! Я NeuroAI - лучшая нейросеть. Задайте мне любой вопрос, и я постараюсь ответить на него.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <textarea
+                        id="messageInput"
+                        placeholder="Напишите ваше сообщение..."
+                        rows="1"
+                    ></textarea>
+                    <div class="file-input-container">
+                        <input type="file" id="fileInput" accept="image/*,.pdf,.doc,.docx,.txt,.xls,.xlsx" multiple style="display: none;">
+                        <button id="fileUploadButton" type="button" title="Прикрепить файл">📎</button>
+                    </div>
+                    <button id="sendButton">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
